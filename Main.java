@@ -1,15 +1,12 @@
 import DiagonalStar.DiagonalStar;
-import FactorPrinter.FactorPrinter;
-import FlourPackProblem.FlourPack;
-import LargestPrime.LargestPrime;
+import PaintJob.PaintJob;
 
 public class Main {
 
     public static void main(String[] args) {
 
-//        int output = LargestPrime.getLargestPrime(21);
-        DiagonalStar.printSquareStar(5);
-        System.out.println();
+
+        System.out.println(PaintJob.getBucketCount(7.25, 4.3, 2.35));
 
     }
 
