@@ -24,10 +24,15 @@ public class Point {
         this.y = y;
     }
 
-
-
-    public double distance() {}
-
-
-
+    public double distance(int x, int y) {
+        return Math.sqrt( (this.x - x) + (this.y - y) * (this.y - y) );
+    }
+    public double distance() {
+        return distance(0,0);
+    }
+    public double distance(Point otherPoint) {
+        return distance(otherPoint.x, otherPoint.y);
+    }
+    // Distance calculation between A(xA,yA) B(xB,yB)
+    // d(A,B) = SQRT (xB-xA) + (yB-yA) * (yB-yA)
 }

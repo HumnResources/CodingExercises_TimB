@@ -1,12 +1,14 @@
 import DiagonalStar.DiagonalStar;
 import PaintJob.PaintJob;
+import Point.Point;
 
 public class Main {
 
     public static void main(String[] args) {
 
 
-        System.out.println(PaintJob.getBucketCount(7.25, 4.3, 2.35));
+        int output = 0;
+        System.out.println(output);
 
     }
 
