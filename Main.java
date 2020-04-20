@@ -1,14 +1,15 @@
+import DiagonalStar.DiagonalStar;
 import FactorPrinter.FactorPrinter;
-import NumberToWords.NumberToWords;
-import PerfectNumber.PerfectNumber;
-
+import FlourPackProblem.FlourPack;
+import LargestPrime.LargestPrime;
 
 public class Main {
 
     public static void main(String[] args) {
 
-
-        NumberToWords.numberToWords(113210);
+//        int output = LargestPrime.getLargestPrime(21);
+        DiagonalStar.printSquareStar(5);
+        System.out.println();
 
     }
 
