@@ -1,3 +1,4 @@
+import ComplexNumber.ComplexNumber;
 import DiagonalStar.DiagonalStar;
 import PaintJob.PaintJob;
 import Point.Point;
@@ -6,8 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        int output = 0;
+        ComplexNumber one = new ComplexNumber(1.0, 1.0);
+        ComplexNumber two = new ComplexNumber(2.5, -1.5);
+        two.add(one);
+        double output = two.getImaginary();
         System.out.println(output);
 
     }
