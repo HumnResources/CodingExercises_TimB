@@ -1,7 +1,4 @@
-import ComplexNumber.ComplexNumber;
-import DiagonalStar.DiagonalStar;
-import PaintJob.PaintJob;
-import Point.Point;
+import Execrcises.ComplexNumber.ComplexNumber;
 
 public class Main {
 
