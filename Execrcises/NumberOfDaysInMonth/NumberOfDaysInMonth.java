@@ -3,7 +3,7 @@ package Execrcises.NumberOfDaysInMonth;
 import Execrcises.LeapYearCalculator.LeapYear;
 
 public class NumberOfDaysInMonth {
-
+/*
     public static int getDaysInMonth(int month, int year) {
 
         if (month < 1 || month > 12 || year < 1 || year > 9999)
@@ -19,5 +19,5 @@ public class NumberOfDaysInMonth {
         };
 
     }
-
+*/
 }
