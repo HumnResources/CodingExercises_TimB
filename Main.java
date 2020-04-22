@@ -1,10 +1,15 @@
+import Lectures.BillsBurgers.Topping;
 import Lectures.Polymorphism.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Topping topping = new Topping(5);
 
+        int[] these = {0,1,2,3,2};
+
+        topping.selectToppings(these);
 
 
 
