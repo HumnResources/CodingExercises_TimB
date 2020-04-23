@@ -1,16 +1,13 @@
-import Lectures.BillsBurgers.Topping;
-import Lectures.Polymorphism.*;
+import Lectures.BillsBurgers.Burger;
+import Lectures.BillsBurgers.DeluxeBurger;
+import Lectures.BillsBurgers.OrderConsole;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Topping topping = new Topping(5);
 
-        int[] these = {0,1,2,3,2};
-
-        topping.selectToppings(these);
-
+        OrderConsole.getOrder();
 
 
     }
