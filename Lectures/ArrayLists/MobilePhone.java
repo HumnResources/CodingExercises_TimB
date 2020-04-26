@@ -1,20 +1,14 @@
 package Lectures.ArrayLists;
 
-import java.awt.image.SinglePixelPackedSampleModel;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MobilePhone {
 
-    private String model;
-    private ArrayList<Contact> contacts = new ArrayList<>();
+    private final ArrayList<Contact> contacts = new ArrayList<>();
 
-    private static Scanner scanner = new Scanner(System.in);
-    private String newLine = System.lineSeparator();
-    public MobilePhone(String model) {
-        this.model = model;
-    }
-
+    private static final Scanner scanner = new Scanner(System.in);
+    private final String newLine = System.lineSeparator();
 
     public void powerOn() {
         boolean running = true;
@@ -44,7 +38,7 @@ public class MobilePhone {
                                 System.out.printf("%sPlease enter new number: ", newLine);
                                 String newNumber = getInput();
                                 modifyContact(name, newName, newNumber);
-                                showContact(name);
+                                showContact(newName);
                             }
                             case 2 -> {
                                 System.out.format("%sPlease enter new number: ", newLine);
@@ -89,6 +83,8 @@ public class MobilePhone {
 
     public void addContact(String name, String number) {
         createContact(name, number);
+        if (contactExists(name))
+            System.out.println("Error creating contact, please modify existing.");
     }
 
     public void removeContact(String name) {
@@ -99,6 +95,8 @@ public class MobilePhone {
     }
 
     public void modifyContact(String name, String nameTo, String numberTo) {
+        if (contactExists(nameTo))
+            System.out.println("Error updating contact, please modify existing.");
         if (contactExists(name)) {
             Contact newContact = new Contact(nameTo, numberTo);
             updateContact(name, newContact);

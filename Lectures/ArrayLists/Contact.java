@@ -1,7 +1,5 @@
 package Lectures.ArrayLists;
 
-import java.util.Objects;
-
 public class Contact {
 
     private String name;
@@ -19,6 +17,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return String.format("%s: %s", this.name, this.number);
+        return String.format("%s - %s", this.name, this.number);
     }
 }
