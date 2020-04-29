@@ -57,7 +57,7 @@ public class MyLinkedList implements INodeList {
     public boolean removeItem(ListItem item) {
 
         if (item != null) {
-            System.out.println("Deleting item " + item);
+            System.out.println("Deleting item " + item.getValue());
         }
 
         ListItem currentItem = this.root;
@@ -98,5 +98,9 @@ public class MyLinkedList implements INodeList {
                 System.out.println(root.getValue());
                 root = root.next();
             }
+//        if (root != null) {
+//            traverseList(root.next());
+//        }
+//        Bad practice as the above has a depth of 60+ :o
     }
 }

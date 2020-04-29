@@ -1,5 +1,6 @@
 import Lectures.AbstractClassInterfaces.AbstractClass.MyLinkedList;
 import Lectures.AbstractClassInterfaces.AbstractClass.Node;
+import Lectures.AbstractClassInterfaces.AbstractClass.SearchTree;
 import Lectures.AbstractClassInterfaces.Challenge.InnerClass;
 
 public class Main {
@@ -7,27 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        myLinkedList.traverseList(myLinkedList.getRoot());
 
-        String stringdata = "1 3 7 6 5 9 7 6 8";
-
-        String[] splitArr = stringdata.split(" ");
-        for (String s : splitArr) {
-            myLinkedList.addItem(new Node(s));
-        }
-        myLinkedList.traverseList(myLinkedList.getRoot());
-        myLinkedList.removeItem(new Node("3"));
-        myLinkedList.traverseList(myLinkedList.getRoot());
-        myLinkedList.removeItem(new Node("5"));
-        myLinkedList.traverseList(myLinkedList.getRoot());
-        myLinkedList.removeItem(new Node("6"));
-        myLinkedList.traverseList(myLinkedList.getRoot());
-        myLinkedList.removeItem(new Node("7"));
-        myLinkedList.traverseList(myLinkedList.getRoot());
-        myLinkedList.removeItem(new Node("8"));
-
-        myLinkedList.traverseList(myLinkedList.getRoot());
     }
     /*
         Class: The blueprint of an object.
@@ -101,6 +82,46 @@ public class Main {
         Abstract Class: Defines a required method
                         but doesn't define method
                         body.
+
+        Modules: Designed for reliable config    -> Ie; A "container" of packages.  module-info.java
+                 while being reliable and include       (open) module academy.learnprogramming.common (name) {
+                 encapsulation etc... Java 9            0+ statements:
+                 JPMS - JavaModuleSystem                    exports, opens, requires, uses, provides
+                                                        }
+        Platform Modules: Provide scalable JRE. -> Ie; Java.IO...
+                          Prefixed with java.
+
+        Normal Module: Grants access at compile time and run time in only those packages explicitly exported.
+                       Has module descriptor file, declared using 'module', does not export by default, basic or open
+
+        Automatic Module: Created after adding JAR file to module path. Not explicitly declared by dev, created by JRE.
+                          Requires all platform modules, own modules, and other automatic modules.
+                          Exports all packages by default, useful for third-party code && Migration to JAVA 9
+
+        Open Module: Grants access at compile time to types in only those exported, BUT
+                    grants access at run time to types in ALL its packages.
+                    All packages were exported.
+                    Some libs require open module.
+                    Reads all modules
+                    Open module makes all packages inside accessible for deep reflection.
+                    'open' Keyword can also declare packages as open for reflection.
+                    Used in JavaFX apps with FXMLLoader class.
+
+        NOTE: Named module CANNOT require unnamed module.
+
+        Aggregator Module: Collect and export contents of their modules. "Aggregate" their modules.
+                           Exist for convenience
+                           Usually no code, just module descriptor
+                           Ie; When a few modules depend on three modules, we can create an aggregator
+                           module for those three modules and that way our modules can depend on a
+                           single (the aggregator) module. -> Java.se
+
+        Module Path: It can represent;
+                     A path to a sequence of folders containing modules.
+                     A path to a modular JAR file.
+                     A path to a JMOD file (extended JAR)
+
+        Class Path: Represents a sequence of JAR files.
      */
 
 
