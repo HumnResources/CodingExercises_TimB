@@ -31,7 +31,6 @@ public class Bank {
                     double deposit = getInput(0,Double.MAX_EXPONENT);
                     newCustomer(name, deposit);
                     System.out.println(currentCustomer.toString());
-                    running = false;
                 }
                 case 2 -> {
                     System.out.println("Please enter your name: ");

@@ -1,23 +1,40 @@
-import Lectures.ArrayLists.Bank;
+import Lectures.AbstractClassInterfaces.AbstractClass.MyLinkedList;
+import Lectures.AbstractClassInterfaces.AbstractClass.Node;
+import Lectures.AbstractClassInterfaces.Challenge.InnerClass;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Bank bank = new Bank();
-        bank.menu();
 
+        MyLinkedList myLinkedList = new MyLinkedList(null);
+        myLinkedList.traverseList(myLinkedList.getRoot());
 
+        String stringdata = "1 3 7 6 5 9 7 6 8";
+
+        String[] splitArr = stringdata.split(" ");
+        for (String s : splitArr) {
+            myLinkedList.addItem(new Node(s));
+        }
+        myLinkedList.traverseList(myLinkedList.getRoot());
+        myLinkedList.removeItem(new Node("3"));
+        myLinkedList.traverseList(myLinkedList.getRoot());
+        myLinkedList.removeItem(new Node("5"));
+        myLinkedList.traverseList(myLinkedList.getRoot());
+        myLinkedList.removeItem(new Node("6"));
+        myLinkedList.traverseList(myLinkedList.getRoot());
+        myLinkedList.removeItem(new Node("7"));
+        myLinkedList.traverseList(myLinkedList.getRoot());
+        myLinkedList.removeItem(new Node("8"));
+
+        myLinkedList.traverseList(myLinkedList.getRoot());
     }
-
-
     /*
         Class: The blueprint of an object.
         Instantiate: Create a copy of blueprint.
         Object: Has own location in memory.
         Reference: Memory address path. Ie; Sharing a home address, same building, multiple references.
                    Can be passed as parameters to constructors and methods.
-
 
         Constructors: Used to instantiate object  -> Cannot have both super() and this().
         variables/initialize object/class.           Usable to prevent code duplication
@@ -72,6 +89,18 @@ public class Main {
 
         Unboxing: Converting a class down to that -> Ie; Converting type Integer -> int: n.intValue();
                   of its primitive type.'Unwrapping'     int myInt = myIntVal;
+
+        Interface: Used to define a common behaviour,
+                   between multiple objects. Creates
+                   a contract.
+
+        Abstraction: Defining the required        -> Ie; Focusing on WHAT needs to be done not HOW to do it.
+                     functionality without               Interfaces.
+                     implementing the details.
+
+        Abstract Class: Defines a required method
+                        but doesn't define method
+                        body.
      */
 
 

@@ -1,4 +1,4 @@
-package Lectures.Inheritance;
+package Lectures.Inheritance.Challenge;
 
 public class Animal {
 
