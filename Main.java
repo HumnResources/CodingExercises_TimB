@@ -1,7 +1,3 @@
-import Lectures.AbstractClassInterfaces.AbstractClass.MyLinkedList;
-import Lectures.AbstractClassInterfaces.AbstractClass.Node;
-import Lectures.AbstractClassInterfaces.AbstractClass.SearchTree;
-import Lectures.AbstractClassInterfaces.Challenge.InnerClass;
 
 public class Main {
 
